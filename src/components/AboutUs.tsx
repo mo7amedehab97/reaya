@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const AboutUs: React.FC = () => {
   return (
@@ -92,9 +93,11 @@ const AboutUs: React.FC = () => {
             {/* Dr. Mahmoud Ismail */}
             <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
-                <img 
+                <Image 
                   src="/doc1.png" 
                   alt="Dr. Mahmoud Ismail" 
+                  width={96}
+                  height={96}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -115,9 +118,11 @@ const AboutUs: React.FC = () => {
             {/* Dr. Ahmed Al-Attar */}
             <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
-                <img 
+                <Image 
                   src="/doc3.png" 
                   alt="Dr. Ahmed Al-Attar" 
+                  width={96}
+                  height={96}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -138,9 +143,11 @@ const AboutUs: React.FC = () => {
             {/* Dr. Iman Al-Amri */}
             <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
-                <img 
+                <Image 
                   src="/doc2.png" 
                   alt="Dr. Iman Al-Amri" 
+                  width={96}
+                  height={96}
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -161,9 +168,11 @@ const AboutUs: React.FC = () => {
             {/* Dr. Mohamed Atta */}
             <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
               <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
-                <img 
+                <Image 
                   src="/doc4.png" 
                   alt="Dr. Mohamed Atta" 
+                  width={96}
+                  height={96}
                   className="w-full h-full object-contain"
                 />
               </div>
