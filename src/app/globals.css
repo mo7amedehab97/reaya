@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  /* Design System Colors */
+  --color-primary: #246BFD;
+  --color-secondary: #FFAE17;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray: #68727D;
+  
+  /* Legacy variables for compatibility */
+  --background: #fefef9;
+  --foreground: var(--color-black);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-ibm-plex-sans-arabic);
+}
+
+/* IBM Plex Sans Arabic Font Variables */
+.font-ibm-regular {
+  font-family: var(--font-ibm-plex-sans-arabic);
+  font-weight: 400;
+}
+
+.font-ibm-bold {
+  font-family: var(--font-ibm-plex-sans-arabic);
+  font-weight: 700;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-ibm-plex-sans-arabic), Arial, Helvetica, sans-serif;
+  direction: rtl;
+  text-align: right;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
