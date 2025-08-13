@@ -68,7 +68,7 @@ export default function FAQ() {
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4 md:space-y-6">
+        <div className="space-y-3 sm:space-y-4 md:space-y-6">
           {faqItems.map((item) => {
             const isOpen = openItems.has(item.id);
             
@@ -79,11 +79,11 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full flex items-center justify-between p-4 md:p-6 text-right hover:bg-gray-50 transition-colors rounded-xl"
+                  className="w-full flex items-center justify-between p-3 sm:p-4 md:p-6 text-right hover:bg-gray-50 transition-colors rounded-xl"
                 >
                   <div className="flex items-center">
                     <svg
-                      className={`w-5 h-5 md:w-6 md:h-6 transition-transform duration-200 text-gray-400 ${
+                      className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-transform duration-200 text-gray-400 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                       fill="none"
@@ -98,14 +98,14 @@ export default function FAQ() {
                       />
                     </svg>
                   </div>
-                  <h4 className="text-base md:text-lg font-ibm-bold text-gray-700 pr-4">
+                  <h4 className="text-sm sm:text-base md:text-lg font-ibm-bold text-gray-700 pr-3 sm:pr-4">
                     {item.question}
                   </h4>
                 </button>
                 
                 {isOpen && (
-                  <div className="px-4 md:px-6 pb-4 md:pb-6">
-                    <p className="text-gray-600 font-ibm-regular leading-relaxed text-sm md:text-base pr-4">
+                  <div className="px-3 sm:px-4 md:px-6 pb-3 sm:pb-4 md:pb-6">
+                    <p className="text-gray-600 font-ibm-regular leading-relaxed text-xs sm:text-sm md:text-base pr-3 sm:pr-4">
                       {item.answer}
                     </p>
                   </div>

@@ -138,11 +138,11 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {pricingPlans.map((plan) => (
             <div
               key={plan.id}
-              className={`relative rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:shadow-xl ${
+              className={`relative rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:shadow-xl ${
                 plan.isPopular
                   ? 'bg-[#246BFD] text-white transform scale-105 sm:scale-105'
                   : 'bg-white border-2 border-gray-200 text-black'
@@ -150,14 +150,14 @@ export default function Pricing() {
             >
               {/* Popular Badge */}
               {plan.isPopular && (
-                <div className="absolute -top-3 sm:-top-4 -right-3 sm:-right-4 bg-[#FFAE17] text-black text-xs sm:text-sm font-ibm-bold px-3 sm:px-4 py-1 sm:py-2 rounded-full">
+                <div className="absolute -top-2 sm:-top-3 md:-top-4 -right-2 sm:-right-3 md:-right-4 bg-[#FFAE17] text-black text-xs sm:text-sm font-ibm-bold px-2 sm:px-3 md:px-4 py-1 sm:py-2 rounded-full">
                   الأكثر شيوعاً
                 </div>
               )}
 
               {/* Plan Header */}
-              <div className="text-center mb-6 sm:mb-8">
-                <h3 className={`text-xl sm:text-2xl font-ibm-bold mb-2 ${
+              <div className="text-center mb-4 sm:mb-6 md:mb-8">
+                <h3 className={`text-lg sm:text-xl md:text-2xl font-ibm-bold mb-2 ${
                   plan.isPopular ? 'text-white' : 'text-black'
                 }`}>
                   {plan.title}
@@ -170,10 +170,10 @@ export default function Pricing() {
               </div>
 
               {/* Price */}
-              <div className="text-center mb-6 sm:mb-8">
+              <div className="text-center mb-4 sm:mb-6 md:mb-8">
                 <div className="flex items-center justify-center gap-1">
-                  <span className="text-2xl sm:text-3xl font-ibm-bold">﷼</span>
-                  <span className={`text-4xl sm:text-5xl font-ibm-bold ${
+                  <span className="text-xl sm:text-2xl md:text-3xl font-ibm-bold">﷼</span>
+                  <span className={`text-3xl sm:text-4xl md:text-5xl font-ibm-bold ${
                     plan.isPopular ? 'text-white' : 'text-black'
                   }`}>
                     {getPrice(plan).toFixed(2)}
@@ -187,15 +187,15 @@ export default function Pricing() {
               </div>
 
               {/* Features */}
-              <div className="mb-6 sm:mb-8">
+              <div className="mb-4 sm:mb-6 md:mb-8">
                 <ul className="space-y-2 sm:space-y-3">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-2 sm:gap-3">
-                      <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                      <div className={`w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
                         plan.isPopular ? 'bg-white' : 'bg-[#246BFD]'
                       }`}>
                         <svg
-                          className={`w-2.5 h-2.5 sm:w-3 sm:h-3 ${
+                          className={`w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 ${
                             plan.isPopular ? 'text-[#246BFD]' : 'text-white'
                           }`}
                           fill="currentColor"
@@ -220,7 +220,7 @@ export default function Pricing() {
 
               {/* CTA Button */}
               <button
-                className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-ibm-bold text-base sm:text-lg transition-all duration-300 ${
+                className={`w-full py-2.5 sm:py-3 md:py-4 px-3 sm:px-4 md:px-6 rounded-lg font-ibm-bold text-sm sm:text-base md:text-lg transition-all duration-300 ${
                   plan.isPopular
                     ? 'bg-white text-[#246BFD] hover:bg-gray-100'
                     : 'bg-[#246BFD] text-white hover:bg-[#1e5ae8]'

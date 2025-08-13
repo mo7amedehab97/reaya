@@ -79,9 +79,9 @@ export default function Header() {
       }`}
       style={{
         width: '100%',
-        minHeight: '110px',
-        paddingRight: 'clamp(20px, 4vw, 160px)',
-        paddingLeft: 'clamp(20px, 4vw, 160px)',
+        minHeight: 'clamp(80px, 12vw, 110px)',
+        paddingRight: 'clamp(16px, 4vw, 160px)',
+        paddingLeft: 'clamp(16px, 4vw, 160px)',
         background: '#fefef9',
         backdropFilter: 'blur(18px)',
         WebkitBackdropFilter: 'blur(18px)',
@@ -89,13 +89,14 @@ export default function Header() {
         opacity: 1,
       }}
     >
-      <div className="flex justify-between items-center h-full min-h-[110px]">
+      <div className="flex justify-between items-center h-full min-h-[80px] sm:min-h-[90px] md:min-h-[100px] lg:min-h-[110px]">
         {/* Right Section - Logo/Brand */}
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 flex items-center justify-center">
+          <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center">
             <svg 
-              width="24" 
-              height="24" 
+              width="20" 
+              height="20" 
+              className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6"
               viewBox="0 0 24 24" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
@@ -109,14 +110,14 @@ export default function Header() {
               />
             </svg>
           </div>
-          <span className="text-[#246BFD] text-xl md:text-2xl font-ibm-bold">رعاية</span>
+          <span className="text-[#246BFD] text-lg sm:text-xl md:text-2xl font-ibm-bold">رعاية</span>
         </div>
 
         {/* Center Section - Navigation Links (Desktop) */}
-        <nav className="hidden lg:flex items-center gap-8 xl:gap-12">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 2xl:gap-12">
           <button 
             onClick={() => scrollToSection('home')}
-            className={`font-ibm-bold pb-1 transition-all duration-300 ${
+            className={`font-ibm-bold pb-1 transition-all duration-300 text-sm lg:text-base ${
               isActiveSection('home') 
                 ? 'text-[#246BFD] border-b-2 border-[#246BFD]' 
                 : 'text-black hover:text-[#246BFD] hover:border-b-2 hover:border-[#246BFD]'
@@ -126,7 +127,7 @@ export default function Header() {
           </button>
           <button 
             onClick={() => scrollToSection('about')}
-            className={`font-ibm-regular pb-1 transition-all duration-300 ${
+            className={`font-ibm-regular pb-1 transition-all duration-300 text-sm lg:text-base ${
               isActiveSection('about') 
                 ? 'text-[#246BFD] border-b-2 border-[#246BFD]' 
                 : 'text-black hover:text-[#246BFD] hover:border-b-2 hover:border-[#246BFD]'
@@ -136,7 +137,7 @@ export default function Header() {
           </button>
           <button 
             onClick={() => scrollToSection('pricing')}
-            className={`font-ibm-regular pb-1 transition-all duration-300 ${
+            className={`font-ibm-regular pb-1 transition-all duration-300 text-sm lg:text-base ${
               isActiveSection('pricing') 
                 ? 'text-[#246BFD] border-b-2 border-[#246BFD]' 
                 : 'text-black hover:text-[#246BFD] hover:border-b-2 hover:border-[#246BFD]'
@@ -146,7 +147,7 @@ export default function Header() {
           </button>
           <button 
             onClick={() => scrollToSection('faq')}
-            className={`font-ibm-regular pb-1 transition-all duration-300 ${
+            className={`font-ibm-regular pb-1 transition-all duration-300 text-sm lg:text-base ${
               isActiveSection('faq') 
                 ? 'text-[#246BFD] border-b-2 border-[#246BFD]' 
                 : 'text-black hover:text-[#246BFD] hover:border-b-2 hover:border-[#246BFD]'
@@ -157,8 +158,8 @@ export default function Header() {
         </nav>
 
         {/* Left Section - Buttons (Desktop) */}
-        <div className="hidden md:flex items-center gap-3 lg:gap-4">
-          <button className="bg-[#246BFD] text-white px-4 lg:px-6 py-2 lg:py-3 rounded-full font-ibm-bold hover:bg-[#1e5ae8] transition-colors text-sm lg:text-base">
+        <div className="hidden md:flex items-center gap-2 lg:gap-3 xl:gap-4">
+          <button className="bg-[#246BFD] text-white px-3 lg:px-4 xl:px-6 py-2 lg:py-3 rounded-full font-ibm-bold hover:bg-[#1e5ae8] transition-colors text-xs lg:text-sm xl:text-base">
             احجز الآن
           </button>
       
@@ -167,15 +168,15 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button 
           onClick={toggleMobileMenu}
-          className="lg:hidden flex flex-col items-center justify-center w-8 h-8"
+          className="lg:hidden flex flex-col items-center justify-center w-7 h-7 sm:w-8 sm:h-8"
         >
-          <span className={`block w-6 h-0.5 bg-black transition-all duration-300 ${
+          <span className={`block w-5 h-0.5 sm:w-6 sm:h-0.5 bg-black transition-all duration-300 ${
             isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''
           }`}></span>
-          <span className={`block w-6 h-0.5 bg-black transition-all duration-300 mt-1 ${
+          <span className={`block w-5 h-0.5 sm:w-6 sm:h-0.5 bg-black transition-all duration-300 mt-1 ${
             isMobileMenuOpen ? 'opacity-0' : ''
           }`}></span>
-          <span className={`block w-6 h-0.5 bg-black transition-all duration-300 mt-1 ${
+          <span className={`block w-5 h-0.5 sm:w-6 sm:h-0.5 bg-black transition-all duration-300 mt-1 ${
             isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''
           }`}></span>
         </button>
